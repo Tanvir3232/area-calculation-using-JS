@@ -19,12 +19,12 @@ function setOutput(elementId,shapeName,areaValue){
      const output  = document.getElementById(elementId);
 
      const li      = document.createElement('li');
-     li.classList.add('my-2','flex','justify-between');
+     li.classList.add('my-2','flex','justify-between','items-center','text-lg');
      const liValue = output.appendChild(li);
      const btn = document.createElement("BUTTON");
      const span = document.createElement("span");
      btn.innerHTML= "Convert m<sup>2</sup>";
-     btn.classList.add('bg-cyan-500', 'text-lg', 'py-2','px-4','rounded-xl');
+     btn.classList.add('bg-cyan-500',  'p-2','rounded-xl');
      const areaIs  = shapeName;
      liValue.innerText = areaIs;
      span.innerHTML = areaValue + "cm<sup>2</sup>";
@@ -47,17 +47,18 @@ document.getElementById('calculate-rectangle').addEventListener('click',function
     const areaRectangle = area(width,length);
     setOutput('output','Rectangle',areaRectangle);
 });
-document.getElementById('calculate-rectangle').addEventListener('click',function(){
-    const width   = getInputFieldById('width');
-    const length  = getInputFieldById('length');
 
-    const areaRectangle = area(width,length);
-    setOutput('output','Rectangle',areaRectangle);
-});
 document.getElementById('calculate-parallelogram').addEventListener('click',function(){
     const base   = getTextElementById('parallelogram-base');
     const height = getTextElementById('parallelogram-height');
     const areaParallelogram = area(base,height);
     setOutput('output','Perallelogram',areaParallelogram);
+
+});
+document.getElementById('calculate-rhombus').addEventListener('click',function(){
+    const d1   = getTextElementById('diagonal-1');
+    const d2 = getTextElementById('diagonal-2');
+    const areaRhombus = area(d1,d2)*0.5;
+    setOutput('output','Rhombus',areaRhombus);
 
 });
