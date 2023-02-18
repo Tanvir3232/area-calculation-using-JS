@@ -17,7 +17,12 @@ function area(a,b){
 }
 function setOutput(elementId,shapeName,areaValue){
      const output  = document.getElementById(elementId);
-
+     let areaValueFixed;
+     if(Number.isInteger(areaValue)){
+        areaValueFixed = areaValue;
+     }else{
+        areaValueFixed = areaValue.toFixed(1);
+     }
      const li      = document.createElement('li');
      li.classList.add('my-2','flex','justify-between','items-center','text-lg');
      const liValue = output.appendChild(li);
@@ -27,7 +32,7 @@ function setOutput(elementId,shapeName,areaValue){
      btn.classList.add('bg-cyan-500',  'p-2','rounded-xl');
      const areaIs  = shapeName;
      liValue.innerText = areaIs;
-     span.innerHTML = areaValue + "cm<sup>2</sup>";
+     span.innerHTML = areaValueFixed + "cm<sup>2</sup>";
     
      liValue.appendChild(span);
      liValue.appendChild(btn);
@@ -67,5 +72,12 @@ document.getElementById('calculate-pentagon').addEventListener('click',function(
     const b = getTextElementById('b');
     const areaPentagon = area(p,b)*0.5;
     setOutput('output','Pentagon',areaPentagon);
+
+});
+document.getElementById('calculate-ellipse').addEventListener('click',function(){
+    const a   = getTextElementById('semi-major-axis');
+    const b = getTextElementById('semi-minor-axis');
+    const areaEllipse = area(a,b)*3.14;
+    setOutput('output','Ellipse',areaEllipse);
 
 });
