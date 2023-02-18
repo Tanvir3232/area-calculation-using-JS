@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Blog</title>
+    <!-- tailwind css link  -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <!-- header section  -->
+    <header class="w-4/5 bg-cyan-500 p-5 mx-auto mt-2">
+        
+        <h1 class="text-4xl font-semibold text-white text-center ">Some question & answer about DOM</h1>
+    </header>
+
+    <main>
+        <!-- blog section  -->
+        <section class="w-4/5 pt-5 mx-auto">
+            <ul class=" list-disc p-5">
+                <!-- Question Number 1  -->
+                <li class="font-semibold text-2xl">What is dom and what is the purpose of DOM?</li>
+                <div class="text-lg">
+                    <p>Document object model is known as DOM. Web documents are accessed through this programming interface.</p>
+                    <p>Purpose of DOM: </p>
+                    <ol class="list-decimal ml-8 w-1/2">
+                        <li>Each document element is represented as a node in the tree by the DOM.</li>
+                        <li>The text, structure, and style of a document can all be dynamically accessed and changed by programs and scripts because to this feature.</li>
+                    </ol>
+                </div>
+                <!-- Question Number 2  -->
+                <li class="font-semibold mt-5 text-2xl">How will you select HTML elements using DOM? Name the DOM methods.</li>
+                <div class="text-lg">
+                    <p>To select HTML elements using  DOM, you can use some DOM methods in JavaScript, such as</p>
+                    <ol class="list-decimal ml-8 w-1/2">
+                        <li>getElementById()</li>
+                        <li>getElementsByClassName()</li>
+                        <li>getElementsByTagName()</li>
+                        <li>querySelector()</li>
+                        <li>querySelectorAll()</li>
+                    </ol>
+                </div>
+                <!-- Question Number 3  -->
+                <li class="font-semibold mt-5 text-2xl">What is event bubble?</li>
+                <div>
+                    <p class="text-lg">When an event, such as a click, occurs on a web page element, it is first handled by that element before moving up the parent elements in the HTML hierarchy until it reaches the top level of the page. This process is known as event bubbling.</p>
+                </div>
+
+                <!-- Question Number 5  -->
+                <li class="font-semibold mt-5 text-2xl">What is a callback function and why will you use it?</li>
+                <div>
+                   <p class="text-lg">A callback function allows you to assign a certain task to another function and have it perform asynchronously. The main function will keep running, and the callback function will be called when the task is finished or the event takes place.</p>
+                </div>
+            </ul>
+        </section>
+    </main>
+    
+</body>
+</html>

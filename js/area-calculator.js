@@ -81,3 +81,8 @@ document.getElementById('calculate-ellipse').addEventListener('click',function()
     setOutput('output','Ellipse',areaEllipse);
 
 });
+
+// blog section 
+document.getElementById('blog').addEventListener('click',function(){
+    window.location.href = 'blog.html';
+});
