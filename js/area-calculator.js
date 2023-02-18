@@ -3,6 +3,7 @@ function getInputFieldById(inputFieldId){
     const inputFieldString = inputField.value;
  
     const inputFieldValue  = parseFloat(inputFieldString);
+    inputField.value       = '';
     return inputFieldValue;
 }
 function getTextElementById(elementId){
@@ -86,3 +87,38 @@ document.getElementById('calculate-ellipse').addEventListener('click',function()
 document.getElementById('blog').addEventListener('click',function(){
     window.location.href = 'blog.html';
 });
+
+// Background color generator
+function randomColor() {
+    let color = [];
+    for (let i = 0; i < 3; i++) {
+      color.push(Math.floor(Math.random() * 256));
+    }
+    return 'rgb(' + color.join(', ') + ')';
+  } 
+  
+  
+  document.getElementById('triangle').addEventListener('mouseenter', function(event) {
+       let element = event.target;
+       element.style.backgroundColor = randomColor();
+  });
+  document.getElementById('rectangle').addEventListener('mouseenter', function(event) {
+       let element = event.target;
+       element.style.backgroundColor = randomColor();
+  });
+  document.getElementById('parallelogram').addEventListener('mouseenter', function(event) {
+       let element = event.target;
+       element.style.backgroundColor = randomColor();
+  });
+  document.getElementById('rhombus').addEventListener('mouseenter', function(event) {
+       let element = event.target;
+       element.style.backgroundColor = randomColor();
+  });
+  document.getElementById('pentagon').addEventListener('mouseenter', function(event) {
+       let element = event.target;
+       element.style.backgroundColor = randomColor();
+  });
+  document.getElementById('ellipse').addEventListener('mouseenter', function(event) {
+    let element = event.target;
+    element.style.backgroundColor = randomColor();
+  });
