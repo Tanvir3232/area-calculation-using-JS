@@ -40,3 +40,10 @@ document.getElementById('calculate-triangle').addEventListener('click',function(
      const areaTriangle = area(base,height)*0.5;
      setOutput('output','Triangle',areaTriangle);
 });
+document.getElementById('calculate-rectangle').addEventListener('click',function(){
+    const width   = getInputFieldById('width');
+    const length  = getInputFieldById('length');
+
+    const areaRectangle = area(width,length);
+    setOutput('output','Rectangle',areaRectangle);
+});
