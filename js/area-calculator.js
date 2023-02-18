@@ -47,3 +47,17 @@ document.getElementById('calculate-rectangle').addEventListener('click',function
     const areaRectangle = area(width,length);
     setOutput('output','Rectangle',areaRectangle);
 });
+document.getElementById('calculate-rectangle').addEventListener('click',function(){
+    const width   = getInputFieldById('width');
+    const length  = getInputFieldById('length');
+
+    const areaRectangle = area(width,length);
+    setOutput('output','Rectangle',areaRectangle);
+});
+document.getElementById('calculate-parallelogram').addEventListener('click',function(){
+    const base   = getTextElementById('parallelogram-base');
+    const height = getTextElementById('parallelogram-height');
+    const areaParallelogram = area(base,height);
+    setOutput('output','Perallelogram',areaParallelogram);
+
+});
