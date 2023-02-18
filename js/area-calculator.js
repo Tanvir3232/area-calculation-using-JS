@@ -62,3 +62,10 @@ document.getElementById('calculate-rhombus').addEventListener('click',function()
     setOutput('output','Rhombus',areaRhombus);
 
 });
+document.getElementById('calculate-pentagon').addEventListener('click',function(){
+    const p   = getTextElementById('p');
+    const b = getTextElementById('b');
+    const areaPentagon = area(p,b)*0.5;
+    setOutput('output','Pentagon',areaPentagon);
+
+});
